@@ -1,0 +1,87 @@
+site_name: HyperVerge Wiki
+site_url: !!python/object/apply:os.getenv ["SITE_URL"]
+site_description: "Everything Software goes here!"
+repo_url: https://gitlab.com/hvlabs/engineering-wiki/
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    scheme: preference
+  features:
+    - navigation.instant
+    - navigation.tabs
+plugins:
+  - search:
+      prebuild_index: true
+  - git-revision-date-localized
+  - git-authors
+  - rss:
+      abstract_chars_count: 150
+      feed_ttl: 1440
+      length: 50
+use_directory_urls: false
+markdown_extensions:
+  - pymdownx.highlight :
+      linenums: true
+  - pymdownx.superfences
+extra_css:
+    - css/contributors.css
+
+nav:
+  - Home: index.md
+  - Contribution: contribution.md
+  - '2¢: Dev Edition': 2cents-dev.md
+  - Guides:
+    - Conatainers:
+      - Intro to Docker: docker.md
+      - Intro to Dockerfile: dockerfile.md
+    - Kubernetes:
+      - Kubernetes 101: Kubernetes 101.md
+    - Microservices:
+      - 'Building Microservices by Sam Newman - Summary':
+        - 'Chapter 1 - Microservices': guides/microservices/microservices-sam-newman/chapter1.md
+        - 'Chapter 2 - The Evolutionary Architect': guides/microservices/microservices-sam-newman/chapter2.md
+        - 'Chapter 3 - How to Model Services': guides/microservices/microservices-sam-newman/chapter3.md
+    - SSH:
+      - Basics: SSH/Basics-of-SSH.md
+      - Intermediate: SSH/Intermediate-SSH.md
+    - Testing:
+      - Load Testing with K6: Testing/Load testing using k6.md
+    - AWK: awk.md
+    - Creating an NPM Package: create-npm-package.md
+    - Environment Variables: environment-variables.md
+    - JavaScript: javascript.md
+    - NGINX: nginx-resources.md
+    - ReDiS: redis-resources.md
+    - DBMS Basics: DBMS Basics.md
+    - System Design: System-Design.md
+    - How to connect PostgresQL with CPP?: How to connect postgresql with cpp?.md
+    - NodeJS for Beginners: Nodejs-For-Beginners-Video-Tutorials.md
+    - Share AI models as a package: Sharing-AI-Models-as-Packages.md
+    - Scraping with Cheerio: Scraping-With-Cheerio-for-beginners.md
+    - Submit a web form with POST, and scraping with Cheerio on AWS Lambda: Submitting a POST web form, scrapping with cheerio and hosting on AWS lambda.md
+    - Prevent committing secrets in Git: Prevent-Committing-Credentials-Into-Git-Repositories.md 
+  - Products:
+    - KYC:
+      - How to get Data from new Secure Aadhaar QR: How to get data from new secure Aadhar QR.md
+      - How we scaled Offline e-KYC APIs: How we horizontally scaled Offline e-KYC APIs?.md
+      - Signature verification in E-Aadhaar QR: e-aadhar-qr-signature-verification.md
+      - Fetching correct Session ID for Captcha from UIDAI: Fetching-Correct-SessionId-For-Captcha.md
+  - Platform: 
+    - ALB Ingress Controller:
+      - Basics: Creating an ALB-Ingress-Controller in EKS/02-ALB-Ingress-Basics.md
+      - Routing: Creating an ALB-Ingress-Controller in EKS/03-ALB-ContextPath-Based-Routing.md
+      - Install: Creating an ALB-Ingress-Controller in EKS/01- ALB-Ingress-Install.md
+      - Install v2: Creating an ALB-Ingress-Controller in EKS/Ingress Version-2-Installation.md
+  - Programming Exercises:
+    - Basic Programming to building a social media application:
+      - Introduction: Basic Programming to building a social media application/ Introduction.md
+      - Basic Looping Concepts: Basic Programming to building a social media application/Exercises/Exercise 1 - Basic Looping Concepts.md
+      - Working with Arrays and Strings: Basic Programming to building a social media application/Exercises/Exercise 2 - Working with Arrays and Strings.md
+      - Time Complexity and Data Structures: Basic Programming to building a social media application/Exercises/Exercise 3 - Time complexity and Data Stuctures.md
+      - Starting with NodeJS: Basic Programming to building a social media application/Exercises/Exercise 4 - Starting with NodeJS.md
+      - Making Basic APIs: Basic Programming to building a social media application/Exercises/Exercise 5 - Making Basic APIs.md
+  - Resources:
+    - Collection of resource: Collection of resources.md 
+    - Docker: docker-resources.md
+    - Static Web Hosting: static-web-hosting.md
